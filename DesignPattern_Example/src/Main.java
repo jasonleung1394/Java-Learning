@@ -17,8 +17,7 @@ public class Main {
         AbstractFactoryPattern abstractFactoryPattern = new AbstractFactoryPattern();
         System.out.println(abstractFactoryPattern.getPatternInfo());
         AbstractFactory factoryType =  AbstractFactoryPattern.getFactory("weird");
-        ToyAF toyType = factoryType.getToyAF("Senior");
-         toyType = factoryType.getToyAF("Elder");
+        ToyAF toyType = factoryType.getToyAF("Elder");
 
         toyType.whatToy();
     }
