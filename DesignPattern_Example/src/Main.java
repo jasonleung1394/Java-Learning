@@ -2,12 +2,24 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
+
         SingletonPattern singletonPattern = new SingletonPattern();
         System.out.println(singletonPattern.getPatternInfo());
         System.out.println(singletonPattern.singletonDemoOutput());
 
 
+        FactoryPattern factoryPattern = new FactoryPattern();
+        System.out.println(factoryPattern.getPatternInfo());
+        ToyFactory toyFactory = new ToyFactory();
+        Toy toyChild = toyFactory.getToy("Child");
+        toyChild.whatToy();
+
+        AbstractFactoryPattern abstractFactoryPattern = new AbstractFactoryPattern();
+        System.out.println(abstractFactoryPattern.getPatternInfo());
+        AbstractFactory factoryType =  AbstractFactoryPattern.getFactory("weird");
+        ToyAF toyType = factoryType.getToyAF("Senior");
+         toyType = factoryType.getToyAF("Elder");
+
+        toyType.whatToy();
     }
 }
