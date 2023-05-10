@@ -1,4 +1,4 @@
-public class DesignPattern_Template {
+public abstract class DesignPattern_Template {
     String pattern_name;
     String pattern_description;
 
@@ -11,6 +11,7 @@ public class DesignPattern_Template {
                 "-------------------------------------------------------------------------------------------" +
                 "-------------\n";
     }
+    public void showDemo(){}
     public String getPatternOutput(){
         return "Following are the output of \"" + pattern_name + "\"" + patternOutput;
     }

@@ -18,7 +18,18 @@ public class Main {
         System.out.println(abstractFactoryPattern.getPatternInfo());
         AbstractFactory factoryType = AbstractFactoryPattern.getFactory("weird");
         ToyAF toyType = factoryType.getToyAF("Elder");
-
         toyType.whatToy();
+
+        BuilderPattern builderPattern = new BuilderPattern();
+        System.out.println(builderPattern.getPatternInfo());
+        builderPattern.showDemo();
+
+        PrototypePattern prototypePattern = new PrototypePattern();
+        System.out.println(prototypePattern.getPatternInfo());
+        prototypePattern.showDemo();
+
+        AdapterPattern adapterPattern = new AdapterPattern();
+        System.out.println(adapterPattern.getPatternInfo());
+        adapterPattern.showDemo();
     }
 }
